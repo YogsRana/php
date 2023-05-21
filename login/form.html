@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="frm" align="center">
+        <h1>Login</h1>
+        <form name="f1" action="authentication.php" onsubmit="return validation()" method="POST" >
+            <p>
+            <label>username</label>
+            <input type="text" id="user" name="user" />
+        </p>
+        <p>
+            <label>password</label>
+            <input type="password" id="pass" name="pass"/>
+        </p>
+        <p>
+            <input type="submit" id="btn" value="Login"/>
+        </p>
+        <p>
+            <a href="create_user.html">creat user</a>
+        </p>
+        </form>
+    </div>
+
+    <script>
+        function validation(){
+            var i=document.f1.user.value;
+            var p=document.f1.pass.value;
+            if(i.length=="" && p.length==""){
+                alert("user name and password field are empty");
+                return false;
+            }
+            else{
+                if(i.length==""){
+                    alert("user name field is empty");
+                    return false;
+                }
+                if(p.length==""){
+                    alert("password field is empty");
+                    return false;
+            }
+        }
+    }
+        </script>
+</body>
+</html>
